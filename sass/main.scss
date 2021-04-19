@@ -762,7 +762,7 @@ body {
 }
 
 .customer-item:not(:last-child) {
-  margin-right: #{$card-set-gap};
+  margin-right: $card-set-gap;
 }
 
 .customer-item-link {
@@ -1020,8 +1020,8 @@ body {
 .description-item {
   flex-basis: calc((100% - #{$card-set-gap} * 3) / 3);
 
-  margin-top: #{$card-set-gap};
-  margin-left: #{$card-set-gap};
+  margin-top: $card-set-gap;
+  margin-left: $card-set-gap;
 }
 
 /* Описание работ Portfolio */
