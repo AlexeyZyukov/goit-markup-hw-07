@@ -18,10 +18,10 @@
   </head>
   <body>
     <!-- заголовок страницы, одинаковый на всех страницах -->
-    <header class="section header">
+    <header class="section header header--geometry">
       <!-- Раздел навигации по сайту -->
-      <div class="container header-nav">
-        <nav class="sitenav">
+      <div class="container header-navigation">
+        <nav class="navigation-block">
           <a
             href="WebStudio"
             rel="noopener noreferrer nofollow"
@@ -29,34 +29,38 @@
             ><span class="logo-color">Web</span>Studio</a
           >
 
-          <ul class="sitenav-links no-list link-font">
-            <li>
+          <ul class="navigation-block no-list link-font">
+            <li class="navigation-block__item">
               <a
-                class="sitenav-link no-line"
+                class="navigation-block__link no-line"
                 href="./index.html"
                 title="Переход на главнцю страницу сайта"
               >
                 Студия</a
               >
             </li>
-            <li>
-              <a class="sitenav-link current no-line" href="./portfolio.html"
+            <li class="navigation-block__item">
+              <a
+                class="navigation-block__link current no-line"
+                href="./portfolio.html"
                 >Портфолио</a
               >
             </li>
-            <li><a class="sitenav-link no-line" href="">Контакты</a></li>
+            <li class="navigation-block__item">
+              <a class="navigation-block__link no-line" href="">Контакты</a>
+            </li>
           </ul>
         </nav>
 
         <!-- адресные ссылки -->
-        <div class="header-links link-font">
-          <a class="header-link no-line" href="mailto:info@devstudio.com">
+        <div class="contacts link-font">
+          <a class="contacts_link no-line" href="mailto:info@devstudio.com">
             <svg class="e-mail">
               <use href="./images/svg/icons.svg#envelope"></use>
             </svg>
             info@devstudio.com</a
           >
-          <a class="header-link no-line" href="+380961111111">
+          <a class="contacts_link no-line" href="+380961111111">
             <svg class="smartphone">
               <use href="./images/svg/icons.svg#smartphone"></use>
             </svg>

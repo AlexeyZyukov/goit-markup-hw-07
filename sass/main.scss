@@ -81,7 +81,7 @@ body {
   padding-left: 15px;
 }
 
-/* скрываем вспомогательные заголовки */
+/* скрываем вспомогательные заголовки и др. элементы */
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -91,6 +91,16 @@ body {
   height: 1px !important;
   width: 1px !important;
   overflow: hidden;
+}
+
+/* убираем маркировку списка */
+.no-list {
+  list-style: none;
+}
+
+/* убираем подчеркивание ссылок */
+.no-line {
+  text-decoration: none;
 }
 
 /* logo style */
@@ -111,41 +121,31 @@ body {
   color: $logo-color;
 }
 
-/* убираем маркировку списка */
-.no-list {
-  list-style: none;
-}
-
-/* убираем подчеркивание ссылок */
-.no-line {
-  text-decoration: none;
-}
-
 /* header - верхняя линия сайта */
-.section.header {
+.header--geometry {
   padding-top: 0;
   padding-bottom: 0;
   border-bottom: 1px solid #ececec;
 }
 
 /* flexbox для header */
-.header-nav {
+.header-navigation {
   display: flex;
   align-items: center;
 }
 
-.sitenav {
+.navigation-block {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-right: auto;
 }
 
-.sitenav-links {
+.navigation-block {
   display: flex;
 }
 
-.sitenav-link {
+.navigation-block__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -156,15 +156,15 @@ body {
 }
 
 /* установка расстояния 50px между элементами */
-.sitenav-links li:not(:last-child) {
+.navigation-block__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-links {
+.contacts {
   display: flex;
 }
 
-.header-links > .header-link {
+.contacts > .contacts_link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -193,20 +193,20 @@ body {
 }
 
 /* установка расстояния 50px между элементами соседи */
-.header-link + .header-link {
+.contacts_link + .contacts_link {
   margin-left: 50px;
 }
 
 /* декорация кнопок навигации по сайту */
-.sitenav-link:hover,
-.sitenav-link:focus {
+.navigation-block__link:hover,
+.navigation-block__link:focus {
   color: $accent-color;
 }
 
-.header-link:hover .e-mail,
-.header-link:focus .e-mail,
-.header-link:hover .smartphone,
-.header-link:focus .smartphone {
+.contacts_link:hover .e-mail,
+.contacts_link:focus .e-mail,
+.contacts_link:hover .smartphone,
+.contacts_link:focus .smartphone {
   fill: $accent-color;
 }
 
@@ -228,14 +228,14 @@ body {
   background-repeat: no-repeat;
 }
 
-.header-link {
+.contacts_link {
   color: $secondary-text-color;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-link:hover,
-.header-link:focus {
+.contacts_link:hover,
+.contacts_link:focus {
   color: $accent-color;
 }
 
