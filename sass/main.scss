@@ -939,26 +939,23 @@ body {
   margin-left: 10px;
 }
 
-/* Страница Портфолио */
+/* Страница Портфолио Portfolio */
 
 /* раздел навигация - кнопки */
 .navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 50px;
 }
 
-.navigation-btns {
-  display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: center;
-}
-
-.navigation-item:not(:last-child) {
+.navigation__item:not(:last-child) {
   display: block;
   margin-right: 8px;
   padding: 0;
 }
 
-.navigation .btn {
+.navigation__btn {
   background-color: $secondary-bcg;
   color: $main-text-color;
 
@@ -982,22 +979,22 @@ body {
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation .btn-hover:hover,
-.navigation .btn-focus:focus {
+.btn-hover:hover,
+.btn-focus:focus {
   background-color: $accent-color;
   color: $accent-button-text;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.description {
+.our-projects {
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * #{$card-set-gap});
   margin-left: calc(-1 * #{$card-set-gap});
 }
 
-.description-item {
+.our-projects-item {
   flex-basis: calc((100% - #{$card-set-gap} * 3) / 3);
 
   margin-top: $card-set-gap;
@@ -1005,15 +1002,15 @@ body {
 }
 
 /* Описание работ Portfolio */
-.description-link {
+.our-projects__link {
   display: inline-flex;
   flex-direction: column;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.description-link:hover,
-.description-link:focus {
+.our-projects__link:hover,
+.our-projects__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -1045,14 +1042,14 @@ body {
   color: $secondary-text-color;
 }
 
-/* формирование overlay */
+/* формирование box-overaly__item */
 
-.box-overlay {
+.box-overaly {
   position: relative;
   overflow: hidden;
 }
 
-.overlay {
+.box-overaly__item {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1067,13 +1064,13 @@ body {
 }
 
 /* при ховере или фокусе на ссылке применить оверлей */
-.description-link:hover .overlay,
-.description-link:focus .overlay {
+.our-projects__link:hover .box-overaly__item,
+.our-projects__link:focus .box-overaly__item {
   transform: translateY(0);
   background-color: $accent-color;
 }
 
-.portfolio .overlay-text {
+.box-overaly__text {
   width: 322px;
   height: 168px;
   font-size: 18px;
