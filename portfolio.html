@@ -393,45 +393,49 @@
     <footer class="section page-footer">
       <div class="container">
         <div class="footer">
-          <div class="footer-logo-address footer-item">
+          <div class="footer-logo-address footer__item">
             <a
-              class="logo no-line"
+              class="logo logo--footer no-line"
               href="WebStudio"
               rel="noopener noreferrer nofollow"
               ><span class="logo-color">Web</span>Studio</a
             >
             <address class="page-footer-address">
-              <p class="address-item street">г. Киев, пр-т Леси Украинки, 26</p>
-              <a class="address-item no-line" href="mailto:info@example.com"
+              <p class="company-info__item street">
+                г. Киев, пр-т Леси Украинки, 26
+              </p>
+              <a
+                class="company-info__item no-line"
+                href="mailto:info@example.com"
                 >info@example.com</a
               >
-              <a class="address-item no-line" href="+380961111111"
+              <a class="company-info__item no-line" href="+380961111111"
                 >+38 096 111 11 11</a
               >
             </address>
           </div>
-          <div class="social footer-item">
-            <p class="social-call">присоединяйтесь</p>
+          <div class="social footer__item">
+            <p class="social__appeal">присоединяйтесь</p>
             <a
-              class="social-link instagram no-line"
+              class="social__link instagram no-line"
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferer nofollow"
             ></a>
             <a
-              class="social-link twitter no-line"
+              class="social__link twitter no-line"
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferer nofollow"
             ></a>
             <a
-              class="social-link facebook no-line"
+              class="social__link facebook no-line"
               href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferer nofollow"
             ></a>
             <a
-              class="social-link linkedin no-line"
+              class="social__link linkedin no-line"
               href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferer nofollow"
@@ -439,18 +443,25 @@
           </div>
 
           <!-- оформление секции ввода e-mail -->
-          <div class="call-to-sign footer-item">
-            <p class="exclamation">Подпишитесь на рассылку</p>
-            <form name="signup-form" class="signup-form" autocomplete="on">
+          <div class="call-to-sign footer__item">
+            <p class="call-to-sign__appeal">Подпишитесь на рассылку</p>
+            <form
+              name="call-to-sign__input"
+              class="call-to-sign__input"
+              autocomplete="on"
+            >
               <input
                 type="email"
                 name="email"
                 placeholder="E-mail"
-                class="email-field"
+                class="call-to-sign__email"
               />
-              <button type="submit" class="email-submit btn-hover btn-focus">
+              <button
+                type="submit"
+                class="submit button btn btn-hover btn-focus"
+              >
                 <span>Подписаться</span>
-                <svg width="24" height="24" class="fly">
+                <svg width="24" height="24" class="submit__fly">
                   <use href="./images/svg/icons.svg#fly"></use>
                 </svg>
               </button>

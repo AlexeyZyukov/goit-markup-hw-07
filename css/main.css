@@ -253,7 +253,7 @@ body {
   padding: 0;
 }
 
-.hero-bg-image {
+.hero__bg-image {
   background-color: #c4c4c4;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background/Hero_bcg.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/Hero_bcg.jpg);
@@ -265,7 +265,7 @@ body {
 }
 
 /* формирование padding секции hero*/
-.hero-definition {
+.hero__definition {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -276,7 +276,7 @@ body {
 }
 
 /* отступ между заголовком и кнопкой */
-.hero-title {
+.hero__title {
   margin-bottom: 30px;
   font-family: inherit;
   font-weight: 900;
@@ -360,31 +360,27 @@ body {
   right: 8px;
   width: 30px;
   height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-icon {
+.modal-close__icon {
   fill: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.modal-close:hover .modal-close-icon {
+.modal-close:hover .modal-close__icon {
   fill: #2196f3;
 }
 
 /* оформление формы ввода данных клиента модального окна */
-.client-form {
+.registration-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,7 +390,7 @@ body {
           flex-direction: column;
 }
 
-.client-form-name {
+.registration-form__header {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.05;
@@ -404,7 +400,7 @@ body {
   margin-bottom: 12px;
 }
 
-.client-label {
+.label {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -415,11 +411,11 @@ body {
           flex-direction: column;
 }
 
-.field-description {
+.label__description {
   margin-bottom: 4px;
 }
 
-.client-icon {
+.label__icon {
   position: absolute;
   left: 12px;
   top: 30px;
@@ -427,8 +423,8 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-field,
-.client-comment {
+.label__input-field,
+.registration-form__comment {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   height: 40px;
@@ -437,24 +433,18 @@ body {
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-form label:nth-child(-n + 5) {
+.registration-form .label:nth-child(-n + 5) {
   margin-top: 10px;
 }
 
-/* нужно переназначить отступ на элемент снизу, 
-задав маржин-топ */
-.client-comment {
-  margin-bottom: 20px;
-}
-
-.client-label:hover .client-icon,
-.input-field:focus + .client-icon,
-.input-field:hover + .client-icon {
+.label:hover .label__icon,
+.label__input-field:hover + .label__icon,
+.label__input-field:focus + .label__icon {
   fill: #2196f3;
 }
 
-.input-field:hover,
-.input-field:focus {
+.label__input-field:hover,
+.label__input-field:focus {
   border: 1px solid #2196f3;
   outline-color: #2196f3;
 }
@@ -462,18 +452,31 @@ body {
 /* назначение ховареа полю ввода при наведении для
 выделении его при наведении на иконку, когда курсор стоит
 в поле ввода */
-.client-label:hover > .input-field {
+.label:hover > .label__input-field {
   outline: 1px solid #2196f3;
 }
 
-.client-comment {
+.registration-form__comment {
   resize: none;
   width: 448px;
   height: 120px;
   padding: 12px 16px;
 }
 
-.client-form-send.btn {
+/* форма принятия условий */
+.form-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.registration-form-send {
   width: 200px;
   height: 50px;
   -ms-flex-item-align: center;
@@ -486,20 +489,8 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* формируем кастомный чек-бокс */
-.form-check {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 30px;
-}
-
-/* прячем браузерный чек-бокс используя ранее описанный form-check-input */
-/* .form-check-input {
+/* прячем браузерный чек-бокс используя ранее описанный form-check__input */
+/* .form-check__input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -510,7 +501,8 @@ body {
   overflow: hidden;
   opacity: 0;
 } */
-.form-check-box {
+/* кастомный чек-бокс */
+.form-check__box {
   width: 16px;
   height: 15px;
   margin-right: 9px;
@@ -524,30 +516,30 @@ body {
 }
 
 /* Checked */
-.form-check-input:checked + .form-check-box {
+.form-check__input:checked + .form-check__box {
   background-color: #2196f3;
   background-image: url(../images/svg/check_mark.svg);
 }
 
 /* Focused */
-.form-check-input:focus + .form-check-box {
+.form-check__input:focus + .form-check__box {
   -webkit-box-shadow: 0 0 0 0.1em #2196f3;
           box-shadow: 0 0 0 0.1em #2196f3;
 }
 
-.form-agreement,
-.form-agreement-link {
+.form-check__agreement,
+.form-check__link {
   line-height: 1.71;
   color: #757575;
   margin-right: 0.3em;
 }
 
-.form-agreement-link {
+.form-check__link {
   color: #2196f3;
 }
 
 /* Приоритеты компании  */
-.company-priorities {
+.priorities {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -557,19 +549,19 @@ body {
   margin-left: calc(-1 * 30px);
 }
 
-.priorities-item {
+.priorities__item {
   -ms-flex-preferred-size: calc((100% - 30px * 4) / 4);
       flex-basis: calc((100% - 30px * 4) / 4);
   margin-top: 30px;
   margin-left: 30px;
 }
 
-.priorities-item + .priorities-item {
+.priorities__item + .priorities__item {
   margin-left: 30px;
 }
 
 /* формирование и позиционирование картинок svg приоритета через background-image */
-.priorities-item::before {
+.priorities__item::before {
   content: '';
   display: block;
   height: 120px;
@@ -597,29 +589,26 @@ body {
   background-image: url(../images/svg/astronaut.svg);
 }
 
-.priorities-header {
-  margin-bottom: 10px;
-}
-
-.priorities-item p {
+.priorities__item p {
   color: #757575;
   line-height: 1.71;
 }
 
-.priorities-header {
+.priorities__header {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 /* секция Чем мы занимаемся и Наша команда */
-.section.our-activity {
+.company-activity {
   padding-top: 0;
 }
 
-.activity {
+.activity-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -631,7 +620,7 @@ body {
   margin-top: calc(-1 * 30px);
 }
 
-.activity-item {
+.activity-description__item {
   /* Задаём всем элементам маржины слева и сверху */
   margin-left: 30px;
   margin-top: 30px;
@@ -640,8 +629,8 @@ body {
       flex-basis: calc((100% - 30px * 3) / 3);
 }
 
-.activity-header,
-.ourteam-header {
+.company-activity__header,
+.ourteam__header {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -649,11 +638,11 @@ body {
   line-height: 1.17;
 }
 
-.thumb {
+.activity-description__thumb {
   position: relative;
 }
 
-.thumb-text {
+.activity-description__thumb-text {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -676,12 +665,12 @@ body {
 }
 
 /* секция ourteam */
-.section.ourteam {
+.ourteam {
   background-color: #f5f4fa;
 }
 
 /* flex список Наша команда */
-.ourteam-list {
+.ourteam-members {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,7 +681,7 @@ body {
   margin-top: calc(-1 * 30px);
 }
 
-.ourteam-item {
+.ourteam-members__item {
   -ms-flex-preferred-size: calc((100% - 30px * 4) / 4);
       flex-basis: calc((100% - 30px * 4) / 4);
   margin-left: 30px;
@@ -703,27 +692,27 @@ body {
 }
 
 /* our-team представление членов команды */
-.ourteam-item-title {
+.ourteam-members__title {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
 }
 
-.ourteam h3 {
+.ourteam-members__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
 }
 
 /* подписи к фотографиям сотрудников */
-.ourteam-person-activity {
+.ourteam-members__position {
   color: #757575;
   font-size: 16px;
   line-height: 1.19;
   margin-bottom: 16px;
 }
 
-.ourteam-member {
+.ourteam-members__name {
   margin-bottom: 10px;
 }
 
@@ -733,7 +722,7 @@ body {
   display: inline-flex;
 }
 
-.ourteam-social-link {
+.social-icons__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -750,13 +739,13 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-icons-item:not(:last-child) {
+.social-icons__item:not(:last-child) {
   margin-right: 10px;
 }
 
 /* назанчение hover + focus фону иконки */
-.ourteam-social-link:hover,
-.ourteam-social-link:focus {
+.social-icons__link:hover,
+.social-icons__link:focus {
   background-color: #2196f3;
 }
 
@@ -771,13 +760,13 @@ body {
 /* назанчение hover + focus соц.иконке -
 они назначаются ссылке и применяются
  к иконке, т.к. она указана в конце */
-.ourteam-social-link:hover .icon,
-.ourteam-social-link:focus .icon {
+.social-icons__link:hover .icon,
+.social-icons__link:focus .icon {
   fill: #ffffff;
 }
 
 /* our customers */
-.customers-header {
+.customers-section__header {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -791,14 +780,13 @@ body {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  /* justify-content: space-between; */
 }
 
-.customer-item:not(:last-child) {
+.customers-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.customer-item-link {
+.customers-list__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -816,24 +804,24 @@ body {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customer-icon {
+.customers-list__icon {
   fill: #afb1b8;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customer-item-link:hover .customer-icon,
-.customer-item-link:focus .customer-icon {
+.customers-list__link:hover .customers-list__icon,
+.customers-list__link:focus .customers-list__icon {
   fill: #2196f3;
 }
 
-.customer-item-link:hover,
-.customer-item-link:focus {
+.customers-list__link:hover,
+.customers-list__link:focus {
   border: 1px solid #2196f3;
 }
 
 /* formating footer */
-.section.page-footer {
+.page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
@@ -845,38 +833,38 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* flex-wrap: wrap; */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
 }
 
 /* расчет ширины элемента выполнятся от ширины 1170px */
-.footer-item {
+.footer__item {
   -ms-flex-preferred-size: calc((100% / 12) * 3 - 22.5px);
       flex-basis: calc((100% / 12) * 3 - 22.5px);
 }
 
-.footer-item:not(:first-of-type) {
+.footer__item:not(:first-of-type) {
   margin-left: 30px;
 }
 
 /* цвет логотипа Studio изменен на белый */
-.footer .logo {
-  display: block;
+.logo--footer {
   margin-bottom: 20px;
   margin-right: 0;
   padding: 0;
   color: #ffffff;
 }
 
-.footer .street {
+.street {
   color: #ffffff;
   font-style: normal;
   line-height: 1.19;
 }
 
-.address-item {
+.company-info__item {
   display: block;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
@@ -885,24 +873,24 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address-item:not(:last-child) {
+.company-info__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.address-item:not(.street):hover,
-.address-item:not(.street):focus {
+.company-info__item:not(.street):hover,
+.company-info__item:not(.street):focus {
   color: #2196f3;
 }
 
-.social-call,
-.exclamation {
+.social__appeal,
+.call-to-sign__appeal {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 20px;
   color: #ffffff;
 }
 
-.social-link {
+.social__link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -917,7 +905,7 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link:not(:last-child) {
+.social__link:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -937,8 +925,8 @@ body {
   background-image: url(../images/svg/white_linkedin.svg);
 }
 
-.social-link:hover,
-.social-link:focus {
+.social__link:hover,
+.social__link:focus {
   background-color: #2196f3;
 }
 
@@ -949,10 +937,7 @@ body {
           flex-grow: 1;
 }
 
-/* form {
-  border: 1px solid red;
-} */
-.signup-form {
+.call-to-sign__input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -961,7 +946,7 @@ body {
           justify-content: space-between;
 }
 
-.email-field {
+.call-to-sign__email {
   padding-left: 16px;
   width: 358px;
   height: 50px;
@@ -974,7 +959,7 @@ body {
   background-color: transparent;
 }
 
-.email-field::-webkit-input-placeholder {
+.call-to-sign__email::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
   /* identical to box height, or 125% */
@@ -982,7 +967,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.email-field:-ms-input-placeholder {
+.call-to-sign__email:-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
   /* identical to box height, or 125% */
@@ -990,7 +975,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.email-field::-ms-input-placeholder {
+.call-to-sign__email::-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
   /* identical to box height, or 125% */
@@ -998,7 +983,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.email-field::placeholder {
+.call-to-sign__email::placeholder {
   font-size: 16px;
   line-height: 1.25;
   /* identical to box height, or 125% */
@@ -1006,7 +991,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.email-submit {
+.submit {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1024,16 +1009,9 @@ body {
   border-radius: 4px;
 }
 
-.fly {
+.submit__fly {
   fill: #ffffff;
   margin-left: 10px;
-}
-
-.email-submit > p {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
 }
 
 /* Страница Портфолио */
