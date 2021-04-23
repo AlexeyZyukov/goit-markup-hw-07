@@ -47,16 +47,20 @@
   margin-top: 10px;
 }
 
-.label:hover .label__icon,
-.label__input-field:hover + .label__icon,
-.label__input-field:focus + .label__icon {
-  fill: $accent-color;
+.label__icon {
+  .label:hover &,
+  .label__input-field:hover + &,
+  .label__input-field:focus + & {
+    fill: $accent-color;
+  }
 }
 
-.label__input-field:hover,
-.label__input-field:focus {
-  border: 1px solid $accent-color;
-  outline-color: $accent-color;
+.label__input-field {
+  & :hover,
+  & :focus {
+    border: 1px solid $accent-color;
+    outline-color: $accent-color;
+  }
 }
 
 /* назначение ховареа полю ввода при наведении для
@@ -131,8 +135,7 @@
   box-shadow: 0 0 0 0.1em $accent-color;
 }
 
-.form-check__agreement,
-.form-check__link {
+.form-check__agreement {
   line-height: 1.71;
   color: $secondary-text-color;
   margin-right: 0.3em;

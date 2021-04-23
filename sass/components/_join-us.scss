@@ -1,4 +1,4 @@
-.social__appeal,
+.join-us__appeal,
 .call-to-sign__appeal {
   font-weight: 700;
   text-transform: uppercase;
@@ -7,7 +7,7 @@
   color: $accent-button-text;
 }
 
-.social__link {
+.join-us__link {
   display: inline-flex;
   width: 44px;
   height: 44px;
@@ -21,7 +21,7 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social__link:not(:last-child) {
+.join-us__link:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -41,7 +41,7 @@
   background-image: url(../images/svg/white_linkedin.svg);
 }
 
-.social__link:hover,
-.social__link:focus {
+.join-us__link:hover,
+.join-us__link:focus {
   background-color: $accent-color;
 }

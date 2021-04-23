@@ -1,11 +1,11 @@
 /* формирование overaly */
 
-.box-overaly {
+.overaly {
   position: relative;
   overflow: hidden;
 }
 
-.box-overaly__item {
+.overaly__item {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -20,13 +20,13 @@
 }
 
 /* при ховере или фокусе на ссылке применить оверлей */
-.our-projects__link:hover .box-overaly__item,
-.our-projects__link:focus .box-overaly__item {
+.our-projects__link:hover .overaly__item,
+.our-projects__link:focus .overaly__item {
   transform: translateY(0);
   background-color: $accent-color;
 }
 
-.box-overaly__text {
+.overaly__text {
   width: 322px;
   height: 168px;
   font-size: 18px;
