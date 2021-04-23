@@ -1,0 +1,75 @@
+/* header - верхняя линия сайта */
+.header--geometry {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid #ececec;
+}
+
+/* flexbox для header */
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: auto;
+}
+
+.navigation-block {
+  display: flex;
+}
+
+.navigation-block__link {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $main-text-color;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* установка расстояния 50px между элементами */
+.navigation-block__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts {
+  display: flex;
+}
+
+.contacts > .contacts_link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.e-mail {
+  /* display: inline-flex; */
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: $secondary-text-color;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.smartphone {
+  /* display: inline-flex; */
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: $secondary-text-color;
+
+  transition: fill 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* установка расстояния 50px между элементами соседи */
+.contacts_link + .contacts_link {
+  margin-left: 50px;
+}

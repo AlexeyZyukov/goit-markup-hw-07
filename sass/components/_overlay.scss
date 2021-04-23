@@ -1,0 +1,36 @@
+/* формирование overaly */
+
+.box-overaly {
+  position: relative;
+  overflow: hidden;
+}
+
+.box-overaly__item {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 63px 24px;
+
+  transform: translateY(100%);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* при ховере или фокусе на ссылке применить оверлей */
+.our-projects__link:hover .box-overaly__item,
+.our-projects__link:focus .box-overaly__item {
+  transform: translateY(0);
+  background-color: $accent-color;
+}
+
+.box-overaly__text {
+  width: 322px;
+  height: 168px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: $accent-button-text;
+}
