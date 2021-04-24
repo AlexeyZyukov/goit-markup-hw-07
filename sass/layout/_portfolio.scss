@@ -5,13 +5,13 @@
   flex-wrap: wrap;
   margin-top: calc(-1 * #{$card-set-gap});
   margin-left: calc(-1 * #{$card-set-gap});
-}
 
-.our-projects__item {
-  flex-basis: calc((100% - #{$card-set-gap} * 3) / 3);
+  &__item {
+    flex-basis: calc((100% - #{$card-set-gap} * 3) / 3);
 
-  margin-top: $card-set-gap;
-  margin-left: $card-set-gap;
+    margin-top: $card-set-gap;
+    margin-left: $card-set-gap;
+  }
 }
 
 /* Описание работ Portfolio */

@@ -19,7 +19,7 @@
   margin: 0 auto;
 }
 
-/* формирование padding секции hero*/
+/* формирование padding секции hero и отступа перед кнопкой*/
 
 .hero__definition {
   padding-top: 200px;
@@ -29,15 +29,14 @@
   margin-right: auto;
   margin-left: auto;
   color: $accent-button-text;
-}
 
-/* отступ между заголовком и кнопкой */
-.hero__title {
-  margin-bottom: 30px;
-  font-family: inherit;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  &__title {
+    margin-bottom: 30px;
+    font-family: inherit;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
 }

@@ -19,10 +19,15 @@
   background-repeat: no-repeat;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.join-us__link:not(:last-child) {
-  margin-right: 10px;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }
 
 .instagram {
@@ -39,9 +44,4 @@
 
 .linkedin {
   background-image: url(../images/svg/white_linkedin.svg);
-}
-
-.join-us__link:hover,
-.join-us__link:focus {
-  background-color: $accent-color;
 }
