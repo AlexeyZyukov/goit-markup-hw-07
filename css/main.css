@@ -486,7 +486,10 @@ body {
 }
 
 .form-check__link {
+  display: inline-flex;
+  height: 15px;
   color: #2196f3;
+  border-bottom: 1px solid #2196f3;
 }
 
 .form-send {

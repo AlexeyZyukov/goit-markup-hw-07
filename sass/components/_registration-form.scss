@@ -93,7 +93,10 @@
   }
 
   &__link {
+    display: inline-flex;
+    height: 15px;
     color: $accent-color;
+    border-bottom: 1px solid $accent-color;
   }
 }
 
