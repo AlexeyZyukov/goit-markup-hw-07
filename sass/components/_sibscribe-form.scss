@@ -13,13 +13,23 @@
     width: 358px;
     height: 50px;
 
+    color: #fff;
+
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: transparent;
 
-    &__email::placeholder {
+    // &:valid:not(:focus) {
+    //   color: green;
+    // }
+
+    &:invalid:not(:focus) {
+      color: red;
+    }
+
+    &::placeholder {
       font-size: 16px;
       line-height: 1.25;
       /* identical to box height, or 125% */
