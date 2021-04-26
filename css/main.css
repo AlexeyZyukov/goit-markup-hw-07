@@ -754,6 +754,10 @@ body {
 }
 
 /* декорация навигации по сайту */
+.navigation-block__link.current {
+  color: #2196f3;
+}
+
 .navigation-block__link:hover, .navigation-block__link:focus {
   color: #2196f3;
 }
