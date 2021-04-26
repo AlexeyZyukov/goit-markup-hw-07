@@ -1,36 +1,29 @@
 /* декорация навигации по сайту */
 
-.navigation-block__link {
-  &.current {
-    color: $accent-color;
-  }
+// .navigation-block__link {
+//   &.current {
+//     color: $accent-color;
+//   }
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
-}
+//   &:hover,
+//   &:focus {
+//     color: $accent-color;
+//   }
+// }
 
-.contacts__link {
-  color: $secondary-text-color;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// .contacts__link {
+//   color: $secondary-text-color;
+//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
+//   &:hover,
+//   &:focus {
+//     color: $accent-color;
+//   }
 
-  &:hover .e-mail,
-  &:focus .e-mail,
-  &:hover .smartphone,
-  &:focus .smartphone {
-    fill: $accent-color;
-  }
-}
-
-.link-font {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
+//   &:hover .e-mail,
+//   &:focus .e-mail,
+//   &:hover .smartphone,
+//   &:focus .smartphone {
+//     fill: $accent-color;
+//   }
+// }
